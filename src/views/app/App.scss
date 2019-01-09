@@ -1,0 +1,46 @@
+.app {
+  background-color: var(--white);
+
+  .content {
+    padding: 30px;
+    box-sizing: border-box;
+
+    .heading {
+      border-bottom: 1px solid var(--black);
+      padding-bottom: 5px;
+    }
+    .repository,
+    .organization {
+      margin-bottom: 30px;
+    }
+  }
+  .loading-container {
+    animation: reveal 3s infinite;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+
+    .loading {
+      position: absolute;
+      top: 50vh;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+      font-size: 100px;
+      font-weight: bold;
+    }
+  }
+
+  @keyframes reveal {
+    from {
+      width: 0;
+      opacity: 1;
+    }
+    to {
+      width: 100%;
+      opacity: 0;
+    }
+  }
+}

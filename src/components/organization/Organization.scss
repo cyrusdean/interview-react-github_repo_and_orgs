@@ -1,0 +1,27 @@
+.organization {
+  display: flex;
+  justify-content: center;
+  min-height: 50px;
+  color: var(--white);
+  overflow: hidden;
+
+  .login,
+  .description {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+  }
+  .login {
+    width: 33.333%;
+    text-align: left;
+    background-color: var(--blue);
+    margin: 0;
+  }
+  .description {
+    width: 66.666%;
+    text-align: center;
+    background-color: var(--black);
+    margin: 0;
+    justify-content: center;
+  }
+}

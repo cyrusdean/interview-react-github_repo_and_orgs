@@ -1,0 +1,31 @@
+.repository {
+  display: flex;
+  justify-content: center;
+  min-height: 50px;
+  color: var(--white);
+  overflow: hidden;
+
+  .repository-meta,
+  .description {
+    padding: 10px 20px;
+    background-color: var(--black);
+  }
+  .repository-meta {
+    width: 33.333%;
+    text-align: left;
+    background-color: var(--red);
+
+    .name {
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+  .description {
+    width: 66.666%;
+    text-align: center;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
