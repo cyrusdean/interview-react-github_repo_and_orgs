@@ -19,7 +19,7 @@ function getRepos(username) {
     .then(({ data }) => data)
     .catch(({ response }) => {
       reportError(response.data.message)
-      return {}
+      return []
     })
 }
 
@@ -35,6 +35,6 @@ function getUserData(username) {
     }))
     .catch(({ response }) => {
       reportError(response.data.message)
-      return []
+      return {}
     })
 }

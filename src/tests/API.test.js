@@ -1,15 +1,17 @@
 import { getRepos, getUserData } from '@utils/github-api'
 
-test('handles repository requests', async () => {
-  expect(await getRepos('facebook'))
-  expect(await getRepos('google'))
-  expect(await getRepos('cyrusdean'))
-  expect(await getRepos('ehsrthbndxhjdrtjass'))
+const isObject = a => !!a && a.constructor === Object
+
+it('repository requests are safe', async () => {
+  expect(Array.isArray(await getRepos('facebook'))).toBe(true)
+  expect(Array.isArray(await getRepos('google'))).toBe(true)
+  expect(Array.isArray(await getRepos('cyrusdean'))).toBe(true)
+  expect(Array.isArray(await getRepos('ehsrthbndxhjdrtjass'))).toBe(true)
 })
 
-test('handles user requests', async () => {
-  expect(await getUserData('facebook'))
-  expect(await getUserData('google'))
-  expect(await getUserData('cyrusdean'))
-  expect(await getUserData('ehnjrsjdeshnedrsbhedawe'))
+it('user requests are safe', async () => {
+  expect(isObject(await getUserData('facebook'))).toBe(true)
+  expect(isObject(await getUserData('google'))).toBe(true)
+  expect(isObject(await getUserData('cyrusdean'))).toBe(true)
+  expect(isObject(await getUserData('ehnjrsjdeshnedrsbhedawe'))).toBe(true)
 })
